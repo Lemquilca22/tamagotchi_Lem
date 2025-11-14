@@ -216,7 +216,14 @@ public class tamagochi {
                                 int dadoJugador = generador.nextInt(6) + 1;
                                 int dadoTamagotchi = generador.nextInt(6) + 1;
 
-                                if (dadoJugador > dadoTamagotchi) {
+                                if (dadoJugador==dadoTamagotchi){
+                                    System.out.println("Tu resultado: " + dadoJugador);
+                                    System.out.println("Resultado de " + nomTamagotchi + ": "+dadoTamagotchi);
+                                    System.out.println("Empate");
+                                    energia-=1;
+                                    hambre-=2;
+
+                                }else if (dadoJugador > dadoTamagotchi) {
                                     System.out.println("Tu resultado: " + dadoJugador);
                                     System.out.println("Resultado de " + nomTamagotchi + ": "+dadoTamagotchi);
                                     System.out.println("Eres el ganador!!");
