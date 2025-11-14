@@ -32,6 +32,7 @@ public class tamagochi {
                 if (respEmpezar.equalsIgnoreCase("NO")) {
                     empezar = false;
                     System.out.println("Que lastima, nos vemos pronto");
+                    break;
                 }
                 while (aspecto) {
 
@@ -117,6 +118,7 @@ public class tamagochi {
 
                             break;
                         case 2:
+                            if (energia<=10){
                             System.out.println("¿Que vamos a jugar?");
                             System.out.println("1) Piedra, papel o tijera.\n2) Dados.");
                             quevamoaJuga=sc.nextInt();
@@ -210,6 +212,29 @@ public class tamagochi {
                                 }
 
                             } else {
+                                System.out.println("Que comience el juego!!");
+                                int dadoJugador = generador.nextInt(6) + 1;
+                                int dadoTamagotchi = generador.nextInt(6) + 1;
+
+                                if (dadoJugador > dadoTamagotchi) {
+                                    System.out.println("Tu resultado: " + dadoJugador);
+                                    System.out.println("Resultado de " + nomTamagotchi + ": "+dadoTamagotchi);
+                                    System.out.println("Eres el ganador!!");
+                                    felicidad += 2;
+                                    dinero += 3;
+                                    energia -= 1;
+                                    hambre -= 2;
+
+                                } else {
+                                    System.out.println("Tu resultado: " + dadoJugador);
+                                    System.out.println("Resultado de " + nomTamagotchi + ": "+dadoTamagotchi);
+                                    System.out.println("Mejor suerte la proxima!!");
+                                    energia -= 1;
+                                    hambre -= 2;
+                                }
+                            }
+
+
 
                             }
 
@@ -244,6 +269,12 @@ public class tamagochi {
                             break;
 
 
+                    }
+                    if (hambre<=0 | energia<=0 | felicidad<=0) {
+                        System.out.println(nomTamagotchi+" ha muerto");
+                        System.out.println("GAME OVER");
+                        queHará=false;
+                        padre=false;
                     }
                     //aqui para ir sumando las stats
                 }
