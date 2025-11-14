@@ -4,10 +4,12 @@ public class tamagochi {
     public static void main (String[] args){
         Scanner sc= new Scanner(System.in);
         boolean empezar = true;
-        boolean aspecto=true;
+
         String respEmpezar, nomTamagotchi;
         int aspectoTamagotchi;
         String aspectoTamagotchiP = "";
+        boolean aspecto=true;
+        int respAspecto;
         while (empezar) {
             System.out.println("Bienvenido a Tamagotchi");
             System.out.println("Quieres empezar a jugar? (SI/NO)");
@@ -62,8 +64,16 @@ public class tamagochi {
                 System.out.println("Entonces su tamatogchi se llama: " + nomTamagotchi);
                 System.out.println("Y se ve asi: " + aspectoTamagotchiP);
 
-                System.out.println("Quiere seguir o quieres modificar algo antes de empezar?");
-                System.out.println("1)Quiero seguir\n 2)Quiero modoificar algo antes de empezar");
+                System.out.println("Quieres seguir o quieres modificar algo antes de empezar?");
+                System.out.println("1)Quiero seguir\n2)Quiero modificar algo antes de empezar");
+                respAspecto=sc.nextInt();
+
+                if (respAspecto==2) {
+                    aspecto=true;
+                    System.out.println("Okay volvamos a empezar");
+
+                }
+
             }
 
         }
