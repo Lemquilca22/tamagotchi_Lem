@@ -22,22 +22,24 @@ public class tamagochi {
         int comida = 3;
         String respTienda;
         int quevamoaJuga;
+        String volveraJugar;
 
         while (padre) {
             while (empezar) {
                 System.out.println("Bienvenido a Tamagotchi");
-                System.out.println("¿Quieres empezar a jugar? (SI/NO)");
-                respEmpezar = sc.next();
-
-                if (respEmpezar.equalsIgnoreCase("NO")) {
-                    empezar = false;
-                    System.out.println("Que lastima, nos vemos pronto");
-                    break;
-                }
+//                System.out.println("¿Quieres empezar a jugar? (SI/NO)");
+//                respEmpezar = sc.next();
+//
+//                if (respEmpezar.equalsIgnoreCase("NO")) {
+//                    empezar = false;
+//                    System.out.println("Que lastima, nos vemos pronto");
+//                    break;
+//                }
                 while (aspecto) {
 
                     System.out.println("Introduce el nombre de tu tamagotchi: ");
-                    nomTamagotchi = sc.next();
+
+                    nomTamagotchi = sc.nextLine();
                     System.out.println("Muy bien, ahora escoge la apariencia que quieres que tenga " + nomTamagotchi);
                     System.out.println("Aquí hay un menú de aspectos:");
                     System.out.println("1) 🐷\n2) 🐶\n3) 🐱\n4) 🐺\n5) 🐰\n6) 🐯\n7) 🦊\n8) 🐼\n9) 🐸\n10) 🐨");
@@ -86,6 +88,7 @@ public class tamagochi {
                     if (respAspecto == 2) {
                         aspecto = true;
                         System.out.println("Okay volvamos a empezar");
+                        sc.nextLine();
 
                     }
                     if (respAspecto == 1) {
@@ -115,10 +118,13 @@ public class tamagochi {
                                 System.out.println("Comida restante: " + comida);
                             }
                         }
+                            if (hambre>=10){
+                                hambre=10;
+                            }
 
                             break;
                         case 2:
-                            if (energia<=10){
+                            if (energia<10){
                             System.out.println("¿Que vamos a jugar?");
                             System.out.println("1) Piedra, papel o tijera.\n2) Dados.");
                             quevamoaJuga=sc.nextInt();
@@ -137,7 +143,7 @@ public class tamagochi {
                                 int eleccionTamagotchi = generador.nextInt(3) + 1;
 
                                 String movimientoUsuario = "";
-                                String movimientoComputadora = "";
+                                String movimientoTamagotchi = "";
 
                                 if (eleccionUsuario == 1) {
                                     movimientoUsuario = "Piedra";
@@ -148,11 +154,11 @@ public class tamagochi {
                                 }
 
                                 if (eleccionTamagotchi == 1) {
-                                    movimientoComputadora = "Piedra";
+                                    movimientoTamagotchi = "Piedra";
                                 } else if (eleccionTamagotchi == 2) {
-                                    movimientoComputadora = "Papel";
+                                    movimientoTamagotchi = "Papel";
                                 } else if (eleccionTamagotchi == 3) {
-                                    movimientoComputadora = "Tijera";
+                                    movimientoTamagotchi = "Tijera";
                                 }
 
                                 if (eleccionUsuario < 1 || eleccionUsuario > 3) {
@@ -162,7 +168,7 @@ public class tamagochi {
                                 } else {
 
                                     System.out.println("\nTu elección: " + movimientoUsuario);
-                                    System.out.println("La computadora eligió: " + movimientoComputadora);
+                                    System.out.println(nomTamagotchi+" eligió: " + movimientoTamagotchi);
                                     System.out.println("--------------------------------");
 
 
@@ -244,15 +250,21 @@ public class tamagochi {
 
 
                             }
+                            if (energia>=10){
+                                energia=10;}
 
                             break;
                         case 3:
                             if (energia<10) {
                                 energia+=4;
                                 felicidad-=1;
-                            } else {
-                                System.out.println("¿Dormir más?, mejor vamo a juga");
                             }
+                            if (energia>=10){
+                                energia=10;
+                            }
+//                            else {
+//                                System.out.println("¿Dormir más?, mejor vamo a juga");
+//                            }
                             break;
                         case 4:
                             System.out.println("Bienvenido a la tienda:");
@@ -269,6 +281,19 @@ public class tamagochi {
                         case 5:
                             System.out.println(aspectoTamagotchiP + " " + nomTamagotchi);
                             System.out.println("Energia: " + energia + " | " + "Hambre: " + hambre + " | " + "Felicidad: " + felicidad + " | " + "Dinero: " + dinero + " 💵 ");
+                            if (felicidad>7 && hambre>4 && energia>5) {
+                                System.out.println(nomTamagotchi+"Está feliz y activo");
+                            } else if (hambre<=3) {
+                                System.out.println(nomTamagotchi+"Tiene hambre, deberías darle de comer");
+                            } else if (energia<=3) {
+                                System.out.println("Está muy cansado, necesita dormir.");
+                            } else if (felicidad<=3){
+                                System.out.println(nomTamagotchi+"Está triste, juega con él.");
+                            } else if (energia>7 && hambre<5) {
+                                System.out.println(nomTamagotchi+"Está hiperactivo");
+                            } else if (energia<=3 && felicidad<=3 && hambre<=3){
+                                System.out.println(nomTamagotchi+"Está en las últimas");
+                            }
                             break;
                         case 6:
                             queHará = false;
@@ -281,9 +306,18 @@ public class tamagochi {
                         System.out.println(nomTamagotchi+" ha muerto");
                         System.out.println("GAME OVER");
                         queHará=false;
-                        padre=false;
+
                     }
-                    //aqui para ir sumando las stats
+
+                }
+                System.out.println("¿Deseas crear una nueva mascota? (SI/NO)");
+                volveraJugar=sc.next();
+                if (volveraJugar.equalsIgnoreCase("SI")){
+                padre=true;
+                }
+                if (volveraJugar.equalsIgnoreCase("NO")){
+                    padre=false;
+                    break;
                 }
 
             }
