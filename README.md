@@ -3,7 +3,7 @@
 El programa "Tamagotchi", es un codigo hecho con JAVA en el cual se hace uso de bucles y condicionales que permiten hacer de este un juego de decisiones multiples, En tamagotchi observaremos información por pantalla y seremos capaces de responder al ingresar los datos correspondientes. 
 ## Caracteristicas
 
-## ¿Como empezar a Jugar?
+## ¿Como Jugar 🤔?
 1. El codigo mostrará por pantalla la Bienvenida al Juego!!
 2. Tras ello nos dará indicaciones para poder personalizar nuestra mascota virtual.
 3. Debemos Asignar un nombre y un aspecto para nuestro tamagotchi.
