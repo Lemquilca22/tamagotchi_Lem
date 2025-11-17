@@ -1,6 +1,6 @@
 # Tamagotchi 🐦‍⬛
 ## Descripción
-El programa "Tamagotchi", es un codigo hecho con JAVA en el cual se hace uso de bucles y condicionales que permiten hacer de este un juego de decisiones multiples, En tamagotchi observaremos información por pantalla y seremos capaces de responder al ingresar los datos correspondientes. 
+Un Tamagotchi es una mascota virtual. Este debe ser alimentado, entretenido y atendido para mantenerlo feliz y con vida. Si el jugador lo descuida, la mascota puede enfermar o incluso morir.
 ## Caracteristicas
 
 ## ¿Como Jugar 🤔?
