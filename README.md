@@ -1,1 +1,1 @@
-#COMO JUGAR?
+# ¿COMO JUGAR?
