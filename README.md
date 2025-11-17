@@ -1,15 +1,21 @@
 # Tamagotchi 🐦‍⬛
 ## Descripción
 Un Tamagotchi es una mascota virtual. Este debe ser alimentado, entretenido y atendido para mantenerlo feliz y con vida. Si el jugador lo descuida, la mascota puede enfermar o incluso morir.
-## Caracteristicas
 
 ## ¿Como Jugar 🤔?
+
 ### 1. Bienvenida al Juego: 
 - Al iniciar el Juego veras por pantalla, "Bienvenido a Tamagotchi".
 ### 2. Personalizar Tamagotchi 
 - Asigna un nombre a tu tamagotchi, de preferencia el que te guste más, por ejemplo "CR7 chiquito". 
 - Escoge el aspecto de tu tamgotchi, para ello ingresa una de las opciones de 1 al 10.
-### 3. Empieza a interactuar 
+- Antes de pasar a la siguiente parte debes responder si quieres continuar o modiciar algo antes.
+## 3. Aspectos a considerar
+- Tu Tamagotchi tiene tres valores principales (de 0 a 10) empezando en 5 todos:
+  Energía, Hambre, Felicidad y Dinero.
+- Acciones principales:
+  Dar de comer: Escoge entre una de las 4 comidas y reduce el hambre, cada una de ellas tiene diferentes atributos una te puede dar (+3, +2 o +1) en hambre y restar (-1 o -2) de energia
+### 4. Empieza a interactuar 
 - El nombre de tu tamagotchi y su aspecto se mostrarán por pantalla, así como sus estadisticas.
 - Tu objetivo es mantener a tu Tamgotchi saludable, evitar que se enferme y muera.
 - Empieza a interactuar entre los 6 diferentes apartados del Juego:
