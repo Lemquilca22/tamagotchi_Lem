@@ -1,1 +1,1 @@
-# ¿COMO JUGAR?
+# Tamagotchi
