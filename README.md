@@ -5,10 +5,11 @@ Un Tamagotchi es una mascota virtual. Este debe ser alimentado, entretenido y at
 
 ## ¿Como Jugar 🤔?
 ### Bienvenida al Juego: 
-Al iniciar el Juego veremos por pantalla, "Bienvenido a Tamagotchi".
+Al iniciar el Juego veras por pantalla, "Bienvenido a Tamagotchi".
 ### Personalizar Tamagotchi 
-1. En pantalla nos preguntará como queremos llamar a nuestro tamagotchi
-- Asignale el nombre que más te parezca, por ejemplo CR7 chiquito. 
-2. Después de asignar el nombre, hay 10 opciones para personalizar nuestro Tamagotchi.
-- Ingresamos una de las opciones del 1 al 10.
+- Asigna un nombre a tu tamagotchi, de preferencia el que te guste más, por ejemplo "CR7 chiquito". 
+- Escoge el aspecto de tu tamgotchi, para ello ingresa una de las opciones de 1 al 10.
 ### Empieza a interactuar 
+- El nombre de tu tamagotchi y su aspecto se mostrarán por pantalla, así como sus estadisticas.
+- 
+
