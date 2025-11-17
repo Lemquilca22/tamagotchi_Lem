@@ -31,10 +31,12 @@ public class tamagochiprime {
         String volveraJugar;
 
         while (padre) {
-            hambre=5;
-            energia=5;
-            felicidad=5;
+
             while (empezar) {
+                hambre=5;
+                energia=5;
+                felicidad=5;
+                dinero=5;
                 System.out.println("Bienvenido a Tamagotchi");
 //
                 while (aspecto) {
@@ -249,7 +251,6 @@ public class tamagochiprime {
                                     }
 
                                 } else {
-                                    System.out.println("Que comience el juego!!");
                                     int dadoJugador = generador.nextInt(6) + 1;
                                     int dadoTamagotchi = generador.nextInt(6) + 1;
 
@@ -300,7 +301,7 @@ public class tamagochiprime {
                         case 4:
                             System.out.println("Bienvenido a la tienda:");
                             System.out.println("Estas son los articulos disponibles");
-                            System.out.println("1) Hamburguesa - 3 monedas \n2) Milkshake-fresa - 2 monedas \n3) Ensalada-frutas - 1 moneda\n4) Pizza");
+                            System.out.println("1) Hamburguesa - 3 monedas \n2) Milkshake-fresa - 2 monedas \n3) Ensalada-frutas - 1 moneda\n4) Pizza - 3 monedas");
                             eleccioncomida=sc.nextInt();
                             if (eleccioncomida==1) {
                                 hamburguesa+=1;
@@ -327,17 +328,17 @@ public class tamagochiprime {
                             System.out.println(aspectoTamagotchiP + " " + nomTamagotchi);
                             System.out.println("Energia: " + energia + " | " + "Hambre: " + hambre + " | " + "Felicidad: " + felicidad + " | " + "Dinero: " + dinero + " 💵 ");
                             if (felicidad>7 && hambre>4 && energia>5) {
-                                System.out.println(nomTamagotchi+"Está feliz y activo");
+                                System.out.println(nomTamagotchi+" está feliz y activo");
                             } else if (hambre<=3) {
-                                System.out.println(nomTamagotchi+"Tiene hambre, deberías darle de comer");
+                                System.out.println(nomTamagotchi+" tiene hambre, deberías darle de comer");
                             } else if (energia<=3) {
-                                System.out.println("Está muy cansado, necesita dormir.");
+                                System.out.println(nomTamagotchi+" está muy cansado, necesita dormir.");
                             } else if (felicidad<=3){
-                                System.out.println(nomTamagotchi+"Está triste, juega con él.");
+                                System.out.println(nomTamagotchi+" está triste, juega con él.");
                             } else if (energia>7 && hambre<5) {
-                                System.out.println(nomTamagotchi+"Está hiperactivo");
+                                System.out.println(nomTamagotchi+" está hiperactivo");
                             } else if (energia<=3 && felicidad<=3 && hambre<=3){
-                                System.out.println(nomTamagotchi+"Está en las últimas");
+                                System.out.println(nomTamagotchi+" está en las últimas");
                             }
                             break;
                         case 6:
@@ -359,6 +360,7 @@ public class tamagochiprime {
                 volveraJugar=sc.next();
                 if (volveraJugar.equalsIgnoreCase("SI")){
                     padre=true;
+                    sc.nextLine();
                 }
                 if (volveraJugar.equalsIgnoreCase("NO")){
                     padre=false;
