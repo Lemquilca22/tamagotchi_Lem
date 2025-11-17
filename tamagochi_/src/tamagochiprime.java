@@ -126,6 +126,7 @@ public class tamagochiprime {
                                     System.out.println("2) Hamburguesa: "+hamburguesa);
                                     System.out.println("3) Ensalada-Frutas: "+ensaladaFrutas);
                                     System.out.println("4) Pizza: "+pizza);
+                                    System.out.println("Información nutricional: \n- Hamburguesa +3 Hambre -1 Energía\n- Pizza +4 Hambre -2 Energía\n- MilkShake-fresa +2 Hambre -1 Energía\n- Ensalada-frutas +2 Hambre -2 Energía");
                                     System.out.println("¿Cúal vamos a elegir?");
                                     respcomida=sc.nextInt();
                                     if (respcomida==1){
@@ -218,6 +219,7 @@ public class tamagochiprime {
 
                                             } else {
                                                 System.out.println("¡Perdiste! Papel envuelve Piedra.");
+                                                felicidad-=1;
                                                 energia-=1;
                                                 hambre-=2;
                                             }
@@ -231,6 +233,7 @@ public class tamagochiprime {
                                                 hambre-=2;
                                             } else {
                                                 System.out.println("¡Perdiste! Tijera corta Papel.");
+                                                felicidad-=1;
                                                 energia-=1;
                                                 hambre-=2;
                                             }
@@ -244,6 +247,7 @@ public class tamagochiprime {
                                                 hambre-=2;
                                             } else {
                                                 System.out.println("¡Perdiste! Piedra rompe Tijera.");
+                                                felicidad-=1;
                                                 energia-=1;
                                                 hambre-=2;
                                             }
@@ -274,6 +278,7 @@ public class tamagochiprime {
                                         System.out.println("Tu resultado: " + dadoJugador);
                                         System.out.println("Resultado de " + nomTamagotchi + ": "+dadoTamagotchi);
                                         System.out.println("Mejor suerte la proxima!!");
+                                        felicidad-=1;
                                         energia -= 1;
                                         hambre -= 2;
                                     }
@@ -282,8 +287,8 @@ public class tamagochiprime {
 
 
                             }
-                            if (energia>=10){
-                                energia=10;}
+                            if (felicidad>=10){
+                                felicidad=10;}
 
                             break;
                         case 3:
@@ -302,6 +307,7 @@ public class tamagochiprime {
                             System.out.println("Bienvenido a la tienda:");
                             System.out.println("Estas son los articulos disponibles");
                             System.out.println("1) Hamburguesa - 3 monedas \n2) Milkshake-fresa - 2 monedas \n3) Ensalada-frutas - 1 moneda\n4) Pizza - 3 monedas");
+                            System.out.println("Dinero disponible: "+dinero);
                             eleccioncomida=sc.nextInt();
                             if (eleccioncomida==1) {
                                 hamburguesa+=1;
