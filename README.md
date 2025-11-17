@@ -1,1 +1,4 @@
-# Tamagotchi
+# Tamagotchi 🐦‍⬛
+## Descripción
+## Caracteristicas
+## ¿Como Jugar?
