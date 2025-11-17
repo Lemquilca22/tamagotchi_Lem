@@ -4,8 +4,8 @@ El programa "Tamagotchi", es un codigo hecho con JAVA en el cual se hace uso de 
 ## Caracteristicas
 
 ## ¿Como Jugar 🤔?
-### Bienvenido al Juego: 
-El codigo mostrará por pantalla la Bienvenida al Juego!!
+### Bienvenida al Juego: 
+Al iniciar el Juego se nos dará la bienvenida, "Bienvenido a Tamagotchi".
 ### Personalizar Tamagotchi 
 1. En pantalla se nos preguntará como queremos llamar a nuestro tamagotchi
 - Asignale el nombre que más te parezca, por ejemplo CR7 chiquito. 
