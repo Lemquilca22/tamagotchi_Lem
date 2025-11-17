@@ -16,25 +16,27 @@ public class tamagochiprime {
         int queHacer;
         boolean queHará = true; //Boolean más complejo (que modifica y acumula datos)
         //Comida disponible:
-//        int milkshake = 1;
-//        int bocadillo = 1;
-//        int fruta = 1;
-        int comida = 3;
+        int eleccioncomida;
+        int milkshake=1;
+        int hamburguesa=1;
+        int ensaladaFrutas=1;
+        int pizza=0;
+        int respcomida;
+
         String respTienda;
+
+
+
         int quevamoaJuga;
         String volveraJugar;
 
         while (padre) {
+            hambre=5;
+            energia=5;
+            felicidad=5;
             while (empezar) {
                 System.out.println("Bienvenido a Tamagotchi");
-//                System.out.println("¿Quieres empezar a jugar? (SI/NO)");
-//                respEmpezar = sc.next();
 //
-//                if (respEmpezar.equalsIgnoreCase("NO")) {
-//                    empezar = false;
-//                    System.out.println("Que lastima, nos vemos pronto");
-//                    break;
-//                }
                 while (aspecto) {
 
                     System.out.println("Introduce el nombre de tu tamagotchi: ");
@@ -42,11 +44,16 @@ public class tamagochiprime {
                     nomTamagotchi = sc.nextLine();
                     System.out.println("Muy bien, ahora escoge la apariencia que quieres que tenga " + nomTamagotchi);
                     System.out.println("Aquí hay un menú de aspectos:");
-                    System.out.println("1) 🐷\n2) 🐶\n3) 🐱\n4) 🐺\n5) 🐰\n6) 🐯\n7) 🦊\n8) 🐼\n9) 🐸\n10) 🐨");
+                    System.out.println("1) 🐵\n2) 🐶\n3) 🐱\n4) 👻\n5) 🤖\n6) 🐲\n7) 🦖\n8) 🐦‍⬛\n9) 🦆\n10) 🦜");
                     aspectoTamagotchi = sc.nextInt();
+//                    if (aspectoTamagotchi>10){
+//                        System.out.println("Elija un personaje valido del 1-10");
+//                        aspecto=true;
+//
+//                    }
                     switch (aspectoTamagotchi) {
                         case 1:
-                            aspectoTamagotchiP = "🐷";
+                            aspectoTamagotchiP = "🐵";
                             break;
                         case 2:
                             aspectoTamagotchiP = "🐶";
@@ -55,26 +62,27 @@ public class tamagochiprime {
                             aspectoTamagotchiP = "🐱";
                             break;
                         case 4:
-                            aspectoTamagotchiP = "🐺";
+                            aspectoTamagotchiP = "👻";
                             break;
                         case 5:
-                            aspectoTamagotchiP = "🐰";
+                            aspectoTamagotchiP = "🤖";
                             break;
                         case 6:
-                            aspectoTamagotchiP = "🐯";
+                            aspectoTamagotchiP = "🐲";
                             break;
                         case 7:
-                            aspectoTamagotchiP = "🦊";
+                            aspectoTamagotchiP = "🦖";
                             break;
                         case 8:
-                            aspectoTamagotchiP = "🐼";
+                            aspectoTamagotchiP = "🐦‍⬛";
                             break;
                         case 9:
-                            aspectoTamagotchiP = "🐸";
+                            aspectoTamagotchiP = "🦆";
                             break;
                         case 10:
-                            aspectoTamagotchiP = "🐨";
+                            aspectoTamagotchiP = "🦜";
                             break;
+
 
 
                     }
@@ -108,15 +116,36 @@ public class tamagochiprime {
                     switch (queHacer) {
                         case 1: //alimentar
                             if(hambre<10){
-                                if (comida == 0) {
+                                if (milkshake==0 && hamburguesa==0 && ensaladaFrutas==0) {
                                     System.out.println("No tienes comida Compra en la tienda");
                                 } else {
-                                    hambre += 3;
-                                    energia -= 1;
-                                    comida -= 1;
-                                    System.out.println("Has alimentado a " + nomTamagotchi);
-                                    System.out.println("Comida restante: " + comida);
+                                    System.out.println("Tienes los siguientes productos: ");
+                                    System.out.println("1) Milkshake-Fresa: "+milkshake);
+                                    System.out.println("2) Hamburguesa: "+hamburguesa);
+                                    System.out.println("3) Ensalada-Frutas: "+ensaladaFrutas);
+                                    System.out.println("4) Pizza: "+pizza);
+                                    System.out.println("¿Cúal vamos a elegir?");
+                                    respcomida=sc.nextInt();
+                                    if (respcomida==1){
+                                        hambre += 2;
+                                        energia -= 1;
+                                        milkshake -= 1;
+                                    } else if (respcomida==2){
+                                        hambre += 3;
+                                        energia -= 1;
+                                        hamburguesa -= 1;
+                                    } else if (respcomida==3) {
+                                        hambre += 2;
+                                        energia -= 2;
+                                        ensaladaFrutas -= 1;
+                                    } else if ((respcomida==4)) {
+                                        hambre += 4;
+                                        energia -= 2;
+                                        pizza -= 1;
+                                    }
+
                                 }
+                                System.out.println("Has alimentado a " + nomTamagotchi);
                             }
                             if (hambre>=10){
                                 hambre=10;
@@ -124,7 +153,7 @@ public class tamagochiprime {
 
                             break;
                         case 2:
-                            if (energia<10){
+                            if (felicidad<10){
                                 System.out.println("¿Que vamos a jugar?");
                                 System.out.println("1) Piedra, papel o tijera.\n2) Dados.");
                                 quevamoaJuga=sc.nextInt();
@@ -174,6 +203,8 @@ public class tamagochiprime {
 
                                         if (eleccionUsuario == eleccionTamagotchi) {
                                             System.out.println("¡Es un empate!");
+                                            energia-=1;
+                                            hambre-=2;
 
                                         } else if (eleccionUsuario == 1) {
                                             if (eleccionTamagotchi == 3) {
@@ -268,15 +299,29 @@ public class tamagochiprime {
                             break;
                         case 4:
                             System.out.println("Bienvenido a la tienda:");
-                            System.out.println("¿Deseas comprar comida (SI/NO)?");
-                            respTienda=sc.next();
-
-                            if (respTienda.equalsIgnoreCase("SI")){
-                                comida+=1;
+                            System.out.println("Estas son los articulos disponibles");
+                            System.out.println("1) Hamburguesa - 3 monedas \n2) Milkshake-fresa - 2 monedas \n3) Ensalada-frutas - 1 moneda\n4) Pizza");
+                            eleccioncomida=sc.nextInt();
+                            if (eleccioncomida==1) {
+                                hamburguesa+=1;
+                                dinero-=3;
+                                System.out.println("Usted ha comprado 1 hamburguesa");
+                            } else if (eleccioncomida==2){
+                                milkshake+=1;
+                                dinero-=2;
+                                System.out.println("Usted ha comprado 1 milkshake");
+                            } else if (eleccioncomida==3) {
+                                ensaladaFrutas+=1;
                                 dinero-=1;
+                                System.out.println("Usted ha comprado 1 ensalada-frutas");
+                            } else if (eleccioncomida==4){
+                                pizza+=1;
+                                dinero-=3;
+
                             } else {
-                                System.out.println("Vuelve pronto");
+                                System.out.println("Seleccione una opcion valida");
                             }
+
                             break;
                         case 5:
                             System.out.println(aspectoTamagotchiP + " " + nomTamagotchi);
