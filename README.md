@@ -14,13 +14,13 @@ Un Tamagotchi es una mascota virtual. Este debe ser alimentado, entretenido y at
 - Tu Tamagotchi tiene tres valores principales (de 0 a 10) empezando en 5 todos:
   Energía, Hambre, Felicidad y Dinero.
 - Acciones principales:
-  Dar de comer: Escoge entre una de las 4 comidas y reduce el hambre, cada una de ellas tiene diferentes atributos una te puede dar (+3, +2 o +1) en hambre y restar (-1 o -2) de energia.
-  Dormir: Aumenta la energia (+4), pero reduce felicidad (-1)
-  Jugar: Al elegir “Jugar”, el usuario elige qué juego quiere jugar (Dados o Piedra papel tijera): Si el jugador gana, obtiene +2 de felicidad, +3 monedas -2 energia.
+- Dar de comer: Escoge entre una de las 4 comidas y reduce el hambre, cada una de ellas tiene diferentes atributos una te puede dar (+3, +2 o +1) en hambre y restar (-1 o -2) de energia.
+- Dormir: Aumenta la energia (+4), pero reduce felicidad (-1)
+- Jugar: Al elegir “Jugar”, el usuario elige qué juego quiere jugar (Dados o Piedra papel tijera): Si el jugador gana, obtiene +2 de felicidad, +3 monedas -2 energia.
   Si pierde, pierde -1 de felicidad, -1 de energia y -2 hambre, Si empata, sucede lo mismo pierde -1 de energia y -2 de hambre.
-  Tienda: La tienda permite comprar comida (u otros objetos si se amplía).
-  Estado: Se mostrará un menú con las estadísticas de la mascota, la propia mascota y un mensaje indicando su estado.
-  Salir: Finaliza el programa. 
+- Tienda: La tienda permite comprar comida (u otros objetos si se amplía).
+- Estado: Se mostrará un menú con las estadísticas de la mascota, la propia mascota y un mensaje indicando su estado.
+- Salir: Finaliza el programa. 
 
 
 ### 4. Empieza a interactuar 
