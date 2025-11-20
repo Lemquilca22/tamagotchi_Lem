@@ -10,7 +10,7 @@ Un Tamagotchi es una mascota virtual. Este debe ser alimentado, entretenido y at
 - Asigna un nombre a tu tamagotchi, de preferencia el que te guste más, por ejemplo "CR7 chiquito". 
 - Escoge el aspecto de tu tamgotchi, para ello ingresa una de las opciones de 1 al 10.
 - Antes de pasar a la siguiente parte debes responder si quieres continuar o modiciar algo antes.
-## 3. Aspectos a considerar
+### 3. Aspectos a considerar
 - Tu Tamagotchi tiene tres valores principales (de 0 a 10) empezando en 5 todos:
   Energía, Hambre, Felicidad y Dinero.
 - Acciones principales:
